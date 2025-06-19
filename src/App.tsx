@@ -8,6 +8,9 @@ import Dashboard from './pages/Dashboard';
 import Articles from './pages/Articles';
 import CreateArticle from './pages/CreateArticle';
 import EditArticle from './pages/EditArticle';
+import Research from './pages/Research';
+import CreateResearch from './pages/CreateResearch';
+import EditResearch from './pages/EditResearch';
 import NotFoundPage from './pages/NotFoundPage';
 
 // Context
@@ -27,9 +30,9 @@ function App() {
             <Route path="/articles" element={<ProtectedRoute><Articles /></ProtectedRoute>} />
             <Route path="/articles/create" element={<ProtectedRoute><CreateArticle /></ProtectedRoute>} />
             <Route path="/articles/edit/:id" element={<ProtectedRoute><EditArticle /></ProtectedRoute>} />
-            
-            {/* Redirect root to dashboard */}
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="/research" element={<ProtectedRoute><Research /></ProtectedRoute>} />
+            <Route path="/research/create" element={<ProtectedRoute><CreateResearch /></ProtectedRoute>} />
+            <Route path="/research/edit/:id" element={<ProtectedRoute><EditResearch /></ProtectedRoute>} />
             
             {/* 404 Page */}
             <Route path="*" element={<NotFoundPage />} />
