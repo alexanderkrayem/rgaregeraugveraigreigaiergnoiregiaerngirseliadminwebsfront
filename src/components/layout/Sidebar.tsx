@@ -4,6 +4,7 @@ import {
   LayoutDashboard, 
   FileText, 
   BookOpen, 
+  Users,
   Plus, 
   Settings,
   LogOut
@@ -51,6 +52,16 @@ const Sidebar: React.FC = () => {
       icon: Plus,
       label: 'إضافة بحث',
       path: '/research/create',
+    },
+    {
+      icon: Users,
+      label: 'المؤلفون',
+      path: '/authors',
+    },
+    {
+      icon: Plus,
+      label: 'إضافة مؤلف',
+      path: '/authors/create',
     },
   ];
 
